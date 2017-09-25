@@ -7,6 +7,14 @@
       function gtag(){dataLayer.push(arguments)};
       gtag('js', new Date());
       gtag('config', 'UA-91829529-2');
+      var trackOutboundLink = function(url) {
+        gtag('event', 'click', {
+          'event_category': 'outbound',
+          'event_label': url,
+          'transport_type': 'beacon',
+          'event_callback': function(){document.location = url;}
+        });
+      }
     </script>
     <title>Portfolio</title>
     <meta charset="UTF-8">
@@ -100,13 +108,13 @@
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Digital Signage Platform</b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6> -->
-          <p> A system to manage and create digital content. System consists of web application  ( <a href="http://dypsignage.herokuapp.com">http://dypsignage.herokuapp.com</a> ) [Management Part] and player[On-Field Part] which can run on raspberry pi, intel stick, or any linux, Wintel platform. Web application consist of widget store where developers can develop and deploy widgets for customers to create presentations to be scheduled on player. The displays running players can be controlled from web application. </p>
+          <p> A system to manage and create digital content. System consists of web application  ( <a href="http://dypsignage.herokuapp.com" onclick="trackOutboundLink('http://dypsignage.herokuapp.com'); return false;">http://dypsignage.herokuapp.com</a> ) [Management Part] and player[On-Field Part] which can run on raspberry pi, intel stick, or any linux, Wintel platform. Web application consist of widget store where developers can develop and deploy widgets for customers to create presentations to be scheduled on player. The displays running players can be controlled from web application. </p>
           <hr>
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Share Market Watch Application </b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6> -->
-          <p> A BSE market watch desktop application. Screenshots :  <a href="https://github.com/gajananpp/BSE-Watch.git">https://github.com/gajananpp/BSE-Watch.git</a> </p>
+          <p> A BSE market watch desktop application. Screenshots :  <a href="https://github.com/gajananpp/BSE-Watch.git" onclick="trackOutboundLink('https://github.com/gajananpp/BSE-Watch.git'); return false;">https://github.com/gajananpp/BSE-Watch.git</a> </p>
           <hr>
         </div>
         <div class="w3-container">
@@ -118,25 +126,25 @@
         <div class="w3-container">
           <h5 class="w3-opacity"><b> Web Augmented Reality using WebGL and ARtoolkit </b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6> -->
-          <p>  A WebAR Demo. Visit  <a href="https://gppatil.github.io">https://gppatil.github.io</a> and point the camera at the marker found on following link: <br> <a href="https://github.com/gajananpp/AR-Pattern/blob/master/HMarker.jpg">https://github.com/gajananpp/AR-Pattern/blob/master/HMarker.jpg</a>.<br > A 3D camera model is rendered in scene which was developed using WebGL(ThreeJS). Codepen link for 3D model : <a href="https://codepen.io/gajananpp/full/RgEZPP">https://codepen.io/gajananpp/full/RgEZPP</a>.  </p>
+          <p>  A WebAR Demo. Visit  <a href="https://gppatil.github.io" onclick="trackOutboundLink('https://gppatil.github.io'); return false;">https://gppatil.github.io</a> and point the camera at the marker found on following link: <br> <a href="https://github.com/gajananpp/AR-Pattern/blob/master/HMarker.jpg" onclick="trackOutboundLink('https://github.com/gajananpp/AR-Pattern/blob/master/HMarker.jpg'); return false;">https://github.com/gajananpp/AR-Pattern/blob/master/HMarker.jpg</a>.<br > A 3D camera model is rendered in scene which was developed using WebGL(ThreeJS). Codepen link for 3D model : <a href="https://codepen.io/gajananpp/full/RgEZPP" onclick="trackOutboundLink('https://codepen.io/gajananpp/full/RgEZPP'); return false;">https://codepen.io/gajananpp/full/RgEZPP</a>.  </p>
           <hr>
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>  Wireless Sensor Network  </b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6> -->
-          <p>   Multiple nodes, each consisting of sensors and loads sends data to central server in real time using sockets. Real time data visualization can be seen on <a href="http://bewsn.herokuapp.com">http://bewsn.herokuapp.com</a>. Data is visualized on given link only when at least one node is ON.Project Link: <a href="https://github.com/gajananpp/BE-Project">https://github.com/gajananpp/BE-Project</a>   </p>
+          <p>   Multiple nodes, each consisting of sensors and loads sends data to central server in real time using sockets. Real time data visualization can be seen on <a href="http://bewsn.herokuapp.com" onclick="trackOutboundLink('http://bewsn.herokuapp.com'); return false;">http://bewsn.herokuapp.com</a>. Data is visualized on given link only when at least one node is ON.Project Link: <a href="https://github.com/gajananpp/BE-Project" onclick="trackOutboundLink('https://github.com/gajananpp/BE-Project'); return false;">https://github.com/gajananpp/BE-Project</a>   </p>
           <hr>
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>  Google Drive Image Widget   </b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6> -->
-          <p>    Widget to manage and display image content using various animation effects on risevision digital signage system using raspberry pi or intel stick. Video Link : <a href="https://github.com/gajananpp/google-drive-image-widget/blob/master/widget_video.webm">https://github.com/gajananpp/google-drive-image-widget/blob/master/widget_video.webm</a>   </p>
+          <p>    Widget to manage and display image content using various animation effects on risevision digital signage system using raspberry pi or intel stick. Video Link : <a href="https://github.com/gajananpp/google-drive-image-widget/blob/master/widget_video.webm" onclick="trackOutboundLink('https://github.com/gajananpp/google-drive-image-widget/blob/master/widget_video.webm'); return false;">https://github.com/gajananpp/google-drive-image-widget/blob/master/widget_video.webm</a>   </p>
           <hr>
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>  Arduino Uno wireless sketch upload    </b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6> -->
-          <p>    Modified optiboot bootloader to increase the bootloader timeout to enter Uno in FLASH mode by efficiently receiving signature bytes according to STK500 protocol.Bootloader source code: <a href="https://github.com/gajananpp/avr-bootloader">https://github.com/gajananpp/avr-bootloader</a>.    </p>
+          <p>    Modified optiboot bootloader to increase the bootloader timeout to enter Uno in FLASH mode by efficiently receiving signature bytes according to STK500 protocol.Bootloader source code: <a href="https://github.com/gajananpp/avr-bootloader" onclick="trackOutboundLink('https://github.com/gajananpp/avr-bootloader'); return false;">https://github.com/gajananpp/avr-bootloader</a>.    </p>
         </div>
       </div>
 
